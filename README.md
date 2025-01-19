@@ -98,4 +98,11 @@ sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O 
 
 
 echo 'export TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/' >> ~/.bashrc
-source ~/.bashrc
+source ~/.bashrc.........
+
+
+
+
+
+sudo mkdir -p /usr/local/share/tessdata
+sudo ln -s /usr/share/tesseract-ocr/5/tessdata/eng.traineddata /usr/local/share/tessdata/eng.traineddata
