@@ -102,7 +102,17 @@ source ~/.bashrc.........
 
 
 
+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
+
+
+
 
 
 sudo mkdir -p /usr/local/share/tessdata
 sudo ln -s /usr/share/tesseract-ocr/5/tessdata/eng.traineddata /usr/local/share/tessdata/eng.traineddata
+
+
+
+
+
+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
