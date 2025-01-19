@@ -55,4 +55,24 @@ Tesseract couldn't load any languages!
 # See problematic frame for where to report the bug.
 #
 
+
+
+
+sudo apt install tesseract-ocr-eng
+
+Set the TESSDATA_PREFIX environment variable:
+
+echo 'export TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata/' >> ~/.bashrc
+source ~/.bashrc
+
+Verify the language files exist:
+
+ls /usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata
+If the file isn't there, you can also check:
+bashCopyls /usr/share/tessdata/eng.traineddata
+
+If you still don't see the file, you can manually download it:
+
+sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata
+
 Process finished with exit code 134 (interrupted by signal 6:SIGABRT)
