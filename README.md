@@ -29,19 +29,30 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # EmployemenetFrontend
 >>>>>>> origin/main
->>>>>CREATE TABLE documents (
-    id bigint not null auto_increment,
-    client_email varchar(255),
-    file_size bigint,
-    ocr_content longtext,
-    ocr_file_name varchar(255),
-    original_file_name varchar(255),
-    processed_date datetime,
-    reference_number varchar(255),
-    primary key (id)
-) ENGINE=MyISAM;
+>>>>>/home/gautamjaganatha/Downloads/Performing-OCR-main/src/main/resources/documents
+>>>>>Error opening data file /usr/local/share/tessdata/eng.traineddata
+Please make sure the TESSDATA_PREFIX environment variable is set to your "tessdata" directory.
+Failed loading language 'eng'
+Tesseract couldn't load any languages!
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000f37b6fa92ccc, pid=10332, tid=0x0000f37b787ff1a0
+#
+# JRE version: OpenJDK Runtime Environment (8.0_432) (build 1.8.0_432-8u432-ga~us1-0ubuntu2~24.04-ga)
+# Java VM: OpenJDK 64-Bit Server VM (25.432-bga mixed mode linux-aarch64 compressed oops)
+# Problematic frame:
+# C  [libtesseract.so.5.0.3+0x92ccc]  tesseract::Tesseract::recog_all_words(tesseract::PAGE_RES*, tesseract::ETEXT_DESC*, tesseract::TBOX const*, char const*, int)+0x3dc
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# An error report file with more information is saved as:
+# /home/gautamjaganatha/Downloads/Performing-OCR-main/hs_err_pid10332.log
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
 
-org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table documents (id bigint not null auto_increment, client_email varchar(255), file_size bigint, ocr_content longtext, ocr_file_name varchar(255), original_file_name varchar(255), processed_date datetime, reference_number varchar(255), primary key (id)) type=MyISAM" via JDBC Statement
-	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
-	at org.hibernate.tool.
->>>>>
+Process finished with exit code 134 (interrupted by signal 6:SIGABRT)
