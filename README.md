@@ -29,8 +29,17 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 =======
 # EmployemenetFrontend
 >>>>>>> origin/main
->>>>>Hibernate: create table documents (id bigint not null auto_increment, client_email varchar(255), file_size bigint, ocr_content longtext, ocr_file_name varchar(255), original_file_name varchar(255), processed_date datetime, reference_number varchar(255), primary key (id)) type=MyISAM
-2025-01-19 16:38:53.031  WARN 9839 --- [           main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table documents (id bigint not null auto_increment, client_email varchar(255), file_size bigint, ocr_content longtext, ocr_file_name varchar(255), original_file_name varchar(255), processed_date datetime, reference_number varchar(255), primary key (id)) type=MyISAM" via JDBC Statement
+>>>>>CREATE TABLE documents (
+    id bigint not null auto_increment,
+    client_email varchar(255),
+    file_size bigint,
+    ocr_content longtext,
+    ocr_file_name varchar(255),
+    original_file_name varchar(255),
+    processed_date datetime,
+    reference_number varchar(255),
+    primary key (id)
+) ENGINE=MyISAM;
 
 org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table documents (id bigint not null auto_increment, client_email varchar(255), file_size bigint, ocr_content longtext, ocr_file_name varchar(255), original_file_name varchar(255), processed_date datetime, reference_number varchar(255), primary key (id)) type=MyISAM" via JDBC Statement
 	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:67) ~[hibernate-core-5.6.15.Final.jar:5.6.15.Final]
