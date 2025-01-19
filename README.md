@@ -89,3 +89,13 @@ If you still don't see the file, you can manually download it:
 sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata
 
 Process finished with exit code 134 (interrupted by signal 6:SIGABRT)
+
+
+
+sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tesseract-ocr/5/tessdata/eng.traineddata
+
+
+
+
+echo 'export TESSDATA_PREFIX=/usr/share/tesseract-ocr/5/tessdata/' >> ~/.bashrc
+source ~/.bashrc
