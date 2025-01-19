@@ -71,6 +71,19 @@ ls /usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata
 If the file isn't there, you can also check:
 bashCopyls /usr/share/tessdata/eng.traineddata
 
+
+
+
+find /usr -name "tessdata"
+
+sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tessdata/eng.traineddata
+
+sudo mkdir -p /usr/share/tessdata
+sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tessdata/eng.traineddata
+
+echo 'export TESSDATA_PREFIX=/usr/share/tessdata/' >> ~/.bashrc
+source ~/.bashrc
+
 If you still don't see the file, you can manually download it:
 
 sudo wget https://github.com/tesseract-ocr/tessdata/raw/main/eng.traineddata -O /usr/share/tesseract-ocr/4.00/tessdata/eng.traineddata
