@@ -116,3 +116,66 @@ sudo ln -s /usr/share/tesseract-ocr/5/tessdata/eng.traineddata /usr/local/share/
 
 
 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
+
+
+
+
+
+
+
+sudo mysql -u root
+If that also gives the same error, then try this complete reset process:
+
+Stop MySQL server:
+
+bashCopysudo systemctl stop mysql
+
+Create and edit a file called mysql-init in your home directory:
+
+bashCopyecho "ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourNewPassword';" > ~/mysql-init
+
+Start MySQL in initialization mode:
+
+bashCopysudo mysqld --init-file=~/mysql-init
+
+Now stop MySQL again:
+
+bashCopysudo systemctl stop mysql
+
+Start MySQL normally:
+
+bashCopysudo systemctl start mysql
+
+Try logging in with the new password:
+
+bashCopymysql -u root -p
+If you're still getting issues, there's an alternative method:
+
+Stop MySQL:
+
+bashCopysudo systemctl stop mysql
+
+Start MySQL in safe mode:
+
+bashCopysudo mysqld_safe --skip-grant-tables &
+
+Connect to MySQL (in a new terminal):
+
+bashCopymysql
+
+Reset the root password:
+
+sqlCopyUSE mysql;
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'YourNewPassword';
+FLUSH PRIVILEGES;
+exit;
+
+Stop and restart MySQL:
+
+bashCopysudo systemctl stop mysql
+sudo systemctl start mysql
+
+Now try logging in:
+
+bashCopymysql -u root -p
