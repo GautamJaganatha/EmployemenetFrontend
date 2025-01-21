@@ -179,3 +179,22 @@ sudo systemctl start mysql
 Now try logging in:
 
 bashCopymysql -u root -p
+
+
+
+
+
+
+CREATE TABLE documents (
+    id BIGINT NOT NULL AUTO_INCREMENT,
+    reference_number VARCHAR(255),
+    original_file_name VARCHAR(255),
+    ocr_file_name VARCHAR(255),
+    client_email VARCHAR(255),
+    processed_date DATETIME,
+    file_size BIGINT,
+    total_words INTEGER,
+    top_words TEXT,
+    ocr_content MEDIUMTEXT,
+    PRIMARY KEY (id)
+);
